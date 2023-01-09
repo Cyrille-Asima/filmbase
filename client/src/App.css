@@ -205,7 +205,8 @@
   border-radius: 25px;
   padding: 3rem;
   margin-bottom: 10rem;
-  margin-left: 2rem;
+  margin-left: 10rem;
+  margin-right: 10rem;
 
 }
 
@@ -214,4 +215,39 @@
   margin-bottom: 2rem;
   justify-content: flex-start;
 
+}
+.view{
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.view1{
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+position: relative;
+z-index: 0;
+min-height: 3rem;
+flex-wrap: wrap;
+padding-bottom: .75rem;
+}
+
+.col-6 {
+  width: 95%;
+  height: 35vw;
+  position: relative;
+  transition: transform 0.2s;
+}
+
+.col-6:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.col-8{
+  width: 95%;
+  height: 35vw;
 }

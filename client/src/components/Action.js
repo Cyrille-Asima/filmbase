@@ -19,16 +19,16 @@ const Action = () => {
     },[])
     
 return (
-        <div>
-        {
-            list.map((film, index)=> { return (
-                <div key={film._id}>
-                    <p>{film.image}</p>
-                    <p><Link to={`/film/${film._id}`}>{film.title}</Link></p>
-                </div>
-            );})
-        }
-        </div>
+    <div className='flex-wrap d-flex'>
+    {
+        list.map((film, index)=> { return (
+            <div key={film._id} className='col-3 col- mt-3'>
+                <Link to={`/film/${film._id}`}><img src={film.image} className="col-6"/></Link>
+                <p><Link to={`/film/${film._id}`}>{film.title}</Link></p>
+            </div>
+        );})
+    }
+    </div>
     )
 }
 

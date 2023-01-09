@@ -23,7 +23,8 @@ import Bollywood from "./components/Bollywood"
 import Anime from "./components/Anime"
 import ViewFilm from "./components/ViewFilm"
 import EditFilm from "./components/EditFilm"
-import Login from './components/Login';
+import Login from './components/Login'
+import AllFilms from './components/AllFilms'
 
 
 
@@ -34,6 +35,7 @@ function App() {
       <NavBar/>
       <Routes>
         <Route path="/films/comedy" element={<Comedy />} />
+        <Route path="/" element={<AllFilms />} />
         <Route path="/films/Drama" element={<Drama />} />
         <Route path="/films/Horror" element={<Horror />} />
         <Route path="/films/Sci_fi" element={<Sci_fi />} />
@@ -49,13 +51,11 @@ function App() {
         <Route path="/films/Kung_fu" element={<Kung_fu />} />
         <Route path="/films/Bollywood" element={<Bollywood />} />
         <Route path="/films/anime" element={<Anime />} />
-        <Route path="/" element={<Register/>}/>
+        {/* <Route path="/" element={<Register/>}/> */}
         <Route path="/films" element={<AddFilm/>}/>
         <Route path="/film/:id" element={<ViewFilm/>} />
         <Route path="/update/:id" element={<EditFilm/>} />
         <Route path="/login" element={<Login/>}/>
-
-
       </Routes>
       </BrowserRouter>
 

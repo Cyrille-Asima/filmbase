@@ -3,8 +3,8 @@ const Film = require ('../models/film.model')
 module.exports = {
     getAllFilms:(req,res)=>{
         Film.find()
-        .then((newFilm)=>{
-            res.json({newFilm})
+        .then((result)=>{
+            res.json(result)
         }).catch((err)=>{
             res.status(400).json(err)
         })

@@ -3,12 +3,12 @@ import axios from 'axios'
 import { Link, useParams, useNavigate } from "react-router-dom";
 
 
-const Kung_fu = () => {
+const AllFilms= () => {
     
     const [list,setList] = useState([])
     
     useEffect(()=>{
-        axios.get(`http://localhost:8000/api/Kungfu`)
+        axios.get('http://localhost:8000/api/allfilms')
         .then((res)=>{
             setList(res.data)
         }).catch((err)=>{
@@ -20,7 +20,7 @@ const Kung_fu = () => {
         <div className='flex-wrap d-flex'>
         {
             list.map((film, index)=> { return (
-                <div key={film._id} className='col-3 col- mt-3'>
+                <div key={film._id}className='col-3 col- mt-3'>
                     <Link to={`/film/${film._id}`}><img src={film.image} className="col-6"/></Link>
                     <p><Link to={`/film/${film._id}`}>{film.title}</Link></p>
                 </div>
@@ -30,4 +30,4 @@ const Kung_fu = () => {
     )
 }
 
-export default Kung_fu
+export default AllFilms

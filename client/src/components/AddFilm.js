@@ -38,6 +38,7 @@ const AddFilm = () => {
             setGenre("");
             setYearReleased("");
             setFactoids("");
+            setImage('')
             navigate('/films');
         }).catch((err)=>{
             console.log(err.response.data.err.errors);
@@ -134,6 +135,10 @@ return (
 
                         <div class="form-item">
                             <input className='form-input' type="text" value={factoids} onChange={(e)=>setFactoids(e.target.value)} placeholder="Fun facts..."/>
+                        </div>
+
+                        <div class="form-item">
+                            <input className='form-input' type="text" value={image} onChange={(e)=>setImage(e.target.value)} placeholder="Post Art..."/>
                         </div>
 
                         <div>

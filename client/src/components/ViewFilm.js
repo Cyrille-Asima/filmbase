@@ -12,7 +12,6 @@ const ViewFilm = (props) => {
     const [cast,setCast] = useState('')
     const [factoids,setFactoids] = useState('')
     const [image,setImage] = useState('')
-    const [allFilms, setAllFilms] = useState([]);
     const [errors, setErrors] = useState({});
     const navigate = useNavigate();
     const [filmNotFoundError, setFilmNotFoundError] = useState("");
@@ -46,7 +45,7 @@ const handleDeleteFilm = () => {
     .then((response) => {
         console.log("success deleting film");
         console.log(response);
-        navigate("/films");
+        navigate("/");
     })
     .catch((err) => {
         console.log("error deleting film", err.response);
@@ -65,16 +64,18 @@ return (
 
             <h2 className="header-secondary"> {title} </h2>
 
+            <div class="view" > 
+                <div class="view">
+                <img src={image} className="col-8"/>
+                </div>
+                <div class="view1">
+                    <p className="detail-line"> <strong>Director:</strong>   {director} </p>
+                    <p className="detail-line"> <strong>Genre:</strong>     {genre}</p>
+                    <p className="detail-line"> <strong>Year Released:</strong>     {yearReleased}</p>
+                    <p className="detail-line"> <strong>Cast:</strong> {cast}</p>
+                    <p className="detail-line"> <strong>Factoids:</strong> {factoids}</p>
+                </div>
             </div>
-
-            <p className="detail-line"> <strong>Director:</strong> {director} </p>
-            <p className="detail-line"> <strong>Genre:</strong> {genre}</p>
-            <p className="detail-line"> <strong>Year Released:</strong> {yearReleased}</p>
-            <p className="detail-line"> <strong>Cast:</strong> {cast}</p>
-            <p className="detail-line"> <strong>Factoids:</strong> {factoids}</p>
-            <p className="detail-line"> <strong>Image:</strong> {image}</p>
-
-            <div>
 
 
         <Link to={`/update/${id}`}>

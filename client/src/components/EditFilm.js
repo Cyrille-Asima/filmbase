@@ -63,11 +63,11 @@ const EditFilm = (props) => {
                         <h2 className=' form-item header-secondary'>Update Film:</h2>
                         <form onSubmit={submitHandler}>
                             <div class="form-item">
-                                <input className='form-input' type="text" value={title} onChange={(e)=>setTitle(e.target.value)} />
+                                <input className='form-input' type="text" value={title} onChange={(e)=>setTitle(e.target.value)} placeholder="Title" />
                                 <input className='form-input'type="text"  value={director} onChange={(e)=>setDirector(e.target.value)} /> 
                             </div>
                             <div class="form-item">
-                                <input className='form-input' type="number"  value={yearReleased} onChange={(e)=>setYearReleased(e.target.value)} />
+                                <input className='form-input' type="number"  value={yearReleased} onChange={(e)=>setYearReleased(e.target.value)} placeholder="Year Released"/>
                                 <select  className='form-input' value={genre} onChange={(e)=>setGenre(e.target.value)}  >
                                     <option>Select A Genre</option>
                                     <option value="Comedy">Comedy</option>
@@ -90,11 +90,11 @@ const EditFilm = (props) => {
                             </div>
     
                             <div class="form-item">
-                                <input className='form-input' type="text" value={cast} onChange={(e)=>setCast(e.target.value)}/>
+                                <input className='form-input' type="text" value={cast} onChange={(e)=>setCast(e.target.value)} placeholder="Cast"/>
                             </div>
     
                             <div class="form-item">
-                                <input className='form-input' type="text" value={factoids} onChange={(e)=>setFactoids(e.target.value)} />
+                                <input className='form-input' type="text" value={factoids} onChange={(e)=>setFactoids(e.target.value)} placeholder="Factoids"/>
                             </div>
     
                             <div class="form-item">
